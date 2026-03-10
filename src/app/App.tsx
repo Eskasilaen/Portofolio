@@ -51,7 +51,7 @@ function App() {
               animate={{ opacity: 1, x: 0 }}
               className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
             >
-              Portofolio Eska Natasia Silaen
+              Eska Natasia Silaen
             </motion.div>
             
             <motion.div
@@ -59,7 +59,7 @@ function App() {
               animate={{ opacity: 1, x: 0 }}
               className="hidden md:flex gap-8"
             >
-              {['About', 'Tech Stack', 'Projects', 'Certifications', 'Experience', 'Contact'].map((item, index) => (
+              {['About', 'Tech Stack', 'Projects', 'Certifications', 'Activities', 'Contact'].map((item, index) => (
                 <motion.button
                   key={item}
                   initial={{ opacity: 0, y: -10 }}
@@ -115,7 +115,7 @@ function App() {
                 transition={{ delay: 0.4 }}
                 className="text-2xl md:text-3xl text-slate-300 mb-6"
               >
-                Full-Stack Developer
+                Aspiring Web Developer
               </motion.h2>
               
               <motion.p
@@ -124,9 +124,7 @@ function App() {
                 transition={{ delay: 0.5 }}
                 className="text-slate-400 text-lg mb-8 leading-relaxed"
               >
-                Building scalable web applications with modern technologies.
-                Passionate about creating intuitive user experiences and robust backend systems.
-              </motion.p>
+              Interested in building web applications and information systems, and learning how technology can solve real-world problems.              </motion.p>
               
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -137,8 +135,8 @@ function App() {
                 <button 
                   onClick={() => {
                     const link = document.createElement('a');
-                    link.href = 'https://drive.google.com/uc?export=download&id=1DxuP6aX3Clz-93xhb2xrwwKM0yFfA74d';
-                    link.download = 'CV_Eska_Natasia_Silaen.pdf';
+                    link.href = 'https://drive.google.com/file/d/16qC5nFd3sWj8iBh4MFoh8OwifqF5cNv0/view?usp=sharing';
+                    link.download = 'Eska Natasia Silaen - CV.pdf';
                     link.click();
                   }}
                   className="group flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-medium transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105"
@@ -267,20 +265,17 @@ function App() {
           >
             <div className="bg-slate-800/50 rounded-2xl p-8 md:p-12 border border-slate-700/50 backdrop-blur-sm">
               <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                I'm a passionate Information Systems student at the Del Institute of Technology with a strong foundation in full-stack web development.
-                Currently seeking internship opportunities to apply my skills in real-world projects and collaborate
-                with experienced developers.
-              </p>
-              <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                I specialize in building modern, responsive web applications using React, Node.js, and cloud technologies.
-                My goal is to create user-friendly solutions that solve real problems while continuously learning and
-                improving my craft.
+                Information Systems student at Institut Teknologi Del with experience in full-stack web development, system analysis, and database design. Skilled in React.js, Node.js, Laravel, and REST APIs through academic and project-based work. Interested in building scalable web applications and improving business processes through technology.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 {[
-                  { label: 'Education', value: 'Information Systems Student, 2023–2027' },
-                  { label: 'Location', value: 'Medan, Indonesia' },
+                  { 
+                    label: 'Education', 
+                    value: 'Information Systems\nInstitut Teknologi Del\n2023–2027',
+                    multiline: true
+                  },
+                  { label: 'Location', value: 'Medan, Indonesia' },                              
                   { label: 'Status', value: 'Open for Internship' },
                 ].map((item, index) => (
                   <div
@@ -288,7 +283,7 @@ function App() {
                     className="p-4 bg-slate-900/50 rounded-xl border border-slate-700/50"
                   >
                     <p className="text-slate-500 text-sm mb-1">{item.label}</p>
-                    <p className="text-white font-medium">{item.value}</p>
+                    <p className="text-white font-medium whitespace-pre-line">{item.value}</p>
                   </div>
                 ))}
               </div>
@@ -329,12 +324,10 @@ function App() {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {[
-                { name: 'HTML5', icon: <Code2 className="w-8 h-8" /> },
+                { name: 'HTML', icon: <Code2 className="w-8 h-8" /> },
                 { name: 'CSS3', icon: <Layout className="w-8 h-8" /> },
                 { name: 'JavaScript', icon: <Code2 className="w-8 h-8" /> },
                 { name: 'React', icon: <Code2 className="w-8 h-8" /> },
-                { name: 'Next.js', icon: <Code2 className="w-8 h-8" /> },
-                { name: 'Tailwind CSS', icon: <Layout className="w-8 h-8" /> },
               ].map((tech, index) => (
                 <motion.div
                   key={tech.name}
@@ -428,7 +421,7 @@ function App() {
           >
             <div className="inline-flex items-center gap-2 mb-4">
               <FolderGit2 className="w-6 h-6 text-blue-400" />
-              <h2 className="text-4xl md:text-5xl font-bold">Featured Projects</h2>
+              <h2 className="text-4xl md:text-5xl font-bold">Projects</h2>
             </div>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
             <p className="text-slate-400 mt-4 text-lg">Some of my recent work</p>
@@ -437,24 +430,39 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: '1000 Days Child Growth & Development Platform',
-                description: 'A full-stack web platform providing educational content, MPASI recipes, and child growth tracking for the first 1000 days of life.',
-                image: 'https://i.ibb.co.com/TMX8Mkf4/Screenshot-2277.png',
-                tags: ['Laravel', 'MySQL', 'REST API', 'Authentication'],
-                githubUrl: 'https://github.com/Eskasilaen/Golden_Age',
-              },
-              {
-                title: 'Chem Discovery – AI-Powered Chemical Discovery App',
-                description: 'An AI-powered web application that automates chemical compound discovery and reformulation using agentic AI and integrated backend services.',
+                title: 'Chem Discovery – AI-Powered Chemical Discovery System',
+                description: 'AI-powered web system that uses backend APIs to support automated chemical compound discovery.',
                 image: 'https://i.ibb.co.com/7fb261J/proyek.png',
                 tags: ['React.js', 'Express.js', 'Flask', 'MongoDB', 'AI Integration'],
                 githubUrl: 'https://github.com/Eskasilaen/chemical_discovery_ai',
               },
               {
+                title: '1000 Days Child Growth & Development Platform',
+                description: 'Web platform for tracking child development in the first 1000 days.',
+                image: 'https://i.ibb.co.com/TMX8Mkf4/Screenshot-2277.png',
+                tags: ['Laravel', 'MySQL', 'REST API', 'Authentication'],
+                githubUrl: 'https://github.com/Eskasilaen/Golden_Age',
+              },
+              {
                 title: 'TOPATOP – Digital Food Marketplace System Design',
-                description: 'Designed a digital food marketplace system including business process modeling, system requirements, and database design.',
+                description: 'Designed a digital food marketplace system for Lake Toba.',
                 image: 'https://i.ibb.co.com/6xjyLBv/Whats-App-Image-2026-01-16-at-11-01-27.jpg',
-                 tags: ['BPMN', 'Use Case', 'DFD', 'ER Diagram', 'System Analysis'],
+                tags: ['BPMN', 'Use Case', 'DFD', 'ER Diagram', 'System Analysis'],
+                Documentation: 'https://drive.google.com/file/d/1I1Phv6poxjKyFbsBFpr7guVFyQGvPXdN/view?usp=sharing',
+              },
+              {
+                title: 'Rumah Kreatif Toba – UI/UX Evaluation and Redesign',
+                description: 'Evaluated platform usability and redesigned the interface by creating wireframes and prototypes.',
+                image: 'https://i.ibb.co.com/mCLg4DJ4/Whats-App-Image-2026-03-08-at-18-06-34.jpg',
+                tags: ['Heuristic Evaluation', 'SUS', 'Figma', 'UI/UX'],
+                Documentation: 'https://drive.google.com/file/d/1f_85m5EGN2h-2vdMrUm9qVGVM9PcDWEi/view?usp=sharing',
+              },
+              {
+                title: 'Academic Process Analysis & Redesign',
+                description: 'Analyzed and redesigned academic learning processes to improve efficiency.',
+                image: 'https://i.ibb.co.com/1Gs6xbM2/bpmn-process.jpg',
+                tags: ['BPMN', 'Process Analysis', 'Workflow Design', 'Process Redesign'],
+                Documentation: 'https://drive.google.com/file/d/1NHbUgGQgjF7uF0749gYd4lHC1W2p4ILY/view?usp=sharing',
               },
             ].map((project, index) => (
               <motion.div
@@ -471,8 +479,8 @@ function App() {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section id="certifications" className="relative py-24 px-6">
+      {/* Certificates Section */}
+      <section id="Certificates" className="relative py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -483,7 +491,7 @@ function App() {
           >
             <div className="inline-flex items-center gap-2 mb-4">
               <Figma className="w-6 h-6 text-blue-400" />
-              <h2 className="text-4xl md:text-5xl font-bold">Certifications</h2>
+              <h2 className="text-4xl md:text-5xl font-bold">Certificates</h2>
             </div>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
             <p className="text-slate-400 mt-4 text-lg">Professional certifications and achievements</p>
@@ -491,6 +499,18 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
+              {
+                title: 'Asah Program — Front-End Web & Back-End with AI',
+                issuer: 'Dicoding x Accenture',
+                year: 2026,
+                image: 'https://i.ibb.co.com/SwKLpLSP/Whats-App-Image-2026-03-08-at-07-04-11.jpg',
+              },
+              {
+                title: 'Best Capstone Project — Asah Program',
+                issuer: 'Dicoding x Accenture',
+                year: 2026,
+                image: 'https://i.ibb.co.com/PzJfRDqc/Whats-App-Image-2026-03-08-at-07-45-06.jpg',
+              },
               {
                 title: 'Back-End Development with JavaScript',
                 issuer: 'Dicoding',
@@ -542,8 +562,8 @@ function App() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="relative py-24 px-6 bg-slate-900/30">
+      {/* Activities Section */}
+      <section id="Activities" className="relative py-24 px-6 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -554,7 +574,7 @@ function App() {
           >
             <div className="inline-flex items-center gap-2 mb-4">
               <Briefcase className="w-6 h-6 text-blue-400" />
-              <h2 className="text-4xl md:text-5xl font-bold">Experience</h2>
+              <h2 className="text-4xl md:text-5xl font-bold">Activities</h2>
             </div>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
           </motion.div>
@@ -566,56 +586,12 @@ function App() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <ExperienceCard
-                title="1000 Days Child Growth & Development Platform"
-                company="Institut Teknologi Del"
-                period="Sep 2025-Dec 2025"
-                description="Developed a team-based full-stack web platform to support child growth education and monitoring during the first 1000 days of life using Laravel and MySQL."
-                type="project"
-              />
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <ExperienceCard
-                title="Chem Discovery-Asah Program (Dicoding x Accenture)"
-                company="Institut Teknologi Del"
-                period="Oct 2025-Dec 2025"
-                description="Designed a digital food marketplace system by analyzing business processes and modeling system requirements using BPMN, DFD, and ER diagrams."
-                type="project"
-              />
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <ExperienceCard
-                title="TOPATOP-Digital Food Marketplace System Design"
-                company="Institut Teknologi Del"
-                period="Apr 2025-May 2025"
-                description="Designed a digital food marketplace system by analyzing business processes and modeling system requirements using BPMN, DFD, and ER diagrams."
-                type="project"
-              />
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
               <ExperienceCard
                 title="Secretary"
                 company="Del Data Science Club"
                 period="Aug 2024-Present"
-                description="Managed organizational administration, documentation, and meeting minutes. Coordinated communication and schedules to support data science workshops and academic programs."
+                description="Handled administrative tasks including documentation, meeting notes, and communication, and supported the organization of workshops and data science activities."
                 type="organization"
               />
             </motion.div>
@@ -630,7 +606,7 @@ function App() {
                 title="Event Committee Member"
                 company="Information Systems Student Association"
                 period="Mar 2024-Present"
-                description="Assisted in planning and organizing departmental student events. Supported event execution and coordination during academic and non-academic activities."
+                description="Helped organize student events by preparing event rundowns, coordinating activities, and managing event preparations such as permits and prize distribution to ensure events ran smoothly."
                 type="organization"
               />
             </motion.div>
@@ -645,7 +621,7 @@ function App() {
                 title="Member-Sports Department"
                 company="BEM IT Del"
                 period="Nov 2024-Present"
-                description="Coordinated weekly student physical training sessions and supported the organization of campus-wide sports events, including the KM Cup."
+                description="Assisted in organizing weekly student sports activities and helped coordinate the KM Cup, a campus sports competition involving multiple student organizations."
                 type="organization"
               />
             </motion.div>
@@ -749,8 +725,8 @@ function App() {
               <button 
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = 'https://drive.google.com/uc?export=download&id=1DxuP6aX3Clz-93xhb2xrwwKM0yFfA74d';
-                  link.download = 'CV_Eska_Natasia_Silaen.pdf';
+                  link.href = 'https://drive.google.com/file/d/16qC5nFd3sWj8iBh4MFoh8OwifqF5cNv0/view?usp=sharing';
+                  link.download = 'Eska Natasia Silaen - CV.pdf';
                   link.click();
                 }}
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-medium transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105"

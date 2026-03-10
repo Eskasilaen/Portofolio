@@ -9,6 +9,7 @@ interface ProjectCardProps {
   tags: string[];
   liveUrl?: string;
   githubUrl?: string;
+  Documentation?: string;
 }
 
 export function ProjectCard({
@@ -18,6 +19,7 @@ export function ProjectCard({
   tags,
   liveUrl,
   githubUrl,
+  Documentation,
 }: ProjectCardProps) {
   return (
     <motion.div
@@ -64,6 +66,17 @@ export function ProjectCard({
             >
               <Github className="w-4 h-4" />
               Source Code
+            </a>
+          )}
+          {Documentation && (
+            <a
+              href={Documentation}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-medium transition-colors"
+            >
+              <ExternalLink className="w-4 h-4" />
+              Documentation
             </a>
           )}
         </div>
